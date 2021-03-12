@@ -3,6 +3,7 @@ package com.app.filme.ui.splash
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.app.filme.R
 import com.app.filme.ui.main.MainActivity
@@ -15,21 +16,19 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        val maxSplashTime: Long = 5000
         var progressSplash: Long = 0
-        val percentResult = maxSplashTime / 101
+        val percentResult = 5000 / 101
 
-        for (x in 0..100) {
+        for (time in 0..100) {
             Handler().postDelayed({
-                progressSplashBar.progress = x
+                progressSplashBar.progress = time
             }, progressSplash)
             progressSplash += percentResult
         }
 
-        Handler().postDelayed({
+        Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, MainActivity::class.java))
             finish()
-        }, maxSplashTime)
+        }, 5000)
     }
 }
-

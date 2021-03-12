@@ -2,6 +2,7 @@ package com.app.filme.api.network
 
 import com.app.filme.api.network.ApiConfig.API_KEY
 import com.app.filme.api.network.ApiConfig.BASE_URL
+import com.app.filme.api.service.ApiService
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
@@ -21,6 +22,9 @@ class ApiNetwork {
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()
+    }
+    val movieService: ApiService by lazy {
+        retrofit.create(ApiService::class.java)
     }
 }
 

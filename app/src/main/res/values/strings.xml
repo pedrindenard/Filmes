@@ -2,4 +2,5 @@
     <string name="app_name">FilmesTune</string>
     <string name="carregando">Carregando…</string>
     <string name="filmes_application">Filmes Application</string>
+    <string name="home_titulo">Home</string>
 </resources>

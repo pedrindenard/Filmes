@@ -3,4 +3,8 @@
     <string name="carregando">Carregando…</string>
     <string name="filmes_application">Filmes Application</string>
     <string name="home_titulo">Home</string>
+    <string name="descubra_titulo_home">Descubra</string>
+    <string name="titulo_tendencias_home">Tendências</string>
+    <string name="titulo_topRated_home">Mais avaliados</string>
+    <string name="titulo_pupolares_home">Populares</string>
 </resources>
